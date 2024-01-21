@@ -1,0 +1,25 @@
+button.button{
+    background-color: #8dc640;
+    margin: 8px;
+    border-radius: 10px;
+    width: 120px;
+    
+}
+.text-danger{
+    text-align: start;
+}
+button{
+    margin: 10px;
+}
+#drd{
+    width: 100%;
+    text-align: left;
+    color: black;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border-color: gainsboro;
+    height: 90%;
+    
+}

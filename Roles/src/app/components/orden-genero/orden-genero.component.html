@@ -1,0 +1,105 @@
+<div class="container">
+  <title>Usuarios registrados</title>
+  <br>
+
+  <ul class="nav nav-tabs">
+    <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
+      <a class="nav-link" href="registro">Registrarse</a>
+    </li>
+    <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
+      <a class="nav-link" href="lista-registro">Usuarios registrados</a>
+    </li>
+    <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
+      <a class="nav-link" href="area-interes">Eventos</a>
+    </li>
+    <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
+      <a class="nav-link active" href="orden">Usuarios genero</a>
+    </li>
+
+  </ul>
+  <br>
+  <!--Barra de busqueda-->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <form class="input-group" role="search">
+        <input class="form-control me-2" type="search" name="filterRol" placeholder="Buscar Usuario"
+          aria-label="search">
+        <button class="btn btn-outline-success" type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+    <br>
+  </nav>
+
+  <br>
+  <div class="titulo">
+    <label class="titulo">Listado de usuarios</label>
+  </div>
+  <br>
+  <div class="mb-3">
+    <div class="form-group">
+       <select  [(ngModel)]="selectedArea">>
+ style="font-size: 20px;font-weight: 400;font-family: 'Montserrat', sans-serif;" name="dropdown" class="form-style" id="drd" 
+        formControlName="nombreArea">
+        <option value="" disabled selected>Selecciona un área de interes</option>
+        <option *ngFor="let area of listArea" 
+        [value]="area.nombreArea">{{ area.nombreArea }}
+        </option>
+      </select>
+      </div>
+  </div> 
+  <br>
+  <div *ngIf="listArea">
+    <div class="d-flex justify-content-center">
+      <table class="table table-bordered border-dark text-center" *ngIf="listUsuarios.length > 0">
+        <thead>
+          <tr>
+            <th style="font-size: 18px; background: #cfcfc4; font-weight: bold;font-family: 'Montserrat', sans-serif;"
+              scope="col">NOMBRE USUARIO</th>
+            <th style="font-size: 18px; background: #cfcfc4; font-weight: bold;font-family: 'Montserrat', sans-serif;"
+              scope="col">GÉNERO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="font-size: 16px;font-family: 'Montserrat', sans-serif;" *ngFor="let usr of listUsuarios">
+            <th>{{usr.apPaterno +" "+ usr.apMaterno +" "+ usr.nombre}}</th>
+            <th>{{usr.genero}}</th>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+      </div>
+      <br>
+      <br>
+      <div>
+        <div class="d-flex justify-content-center">
+          <table class="table table-bordered border-dark text-center" *ngIf="listUsuarios.length > 0">
+            <thead>
+              <tr>
+                <th
+                  style="font-size: 18px; background: #cfcfc4; font-weight: bold;font-family: 'Montserrat', sans-serif;"
+                  scope="col">NOMBRE USUARIO</th>
+                <th
+                  style="font-size: 18px; background: #cfcfc4; font-weight: bold;font-family: 'Montserrat', sans-serif;"
+                  scope="col">GÉNERO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="font-size: 16px;font-family: 'Montserrat', sans-serif;" *ngFor="let usr2 of listUsuarios2">
+                <th>{{usr2.apPaterno +" "+ usr2.apMaterno +" "+ usr2.nombre}}</th>
+                <th>{{usr2.genero}}</th>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
