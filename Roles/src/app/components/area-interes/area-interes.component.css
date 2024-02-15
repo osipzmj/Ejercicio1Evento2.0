@@ -1,0 +1,84 @@
+.container-tarjetas {
+    display: flex; /* Utiliza flexbox para organizar las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan cuando no quepan en una sola fila */
+    justify-content: space-around; /* Distribuye el espacio alrededor de las tarjetas */
+    align-items: flex-start; /* Alinea las tarjetas al principio del contenedor */
+    margin-left: -30px; /* Ajusta el margen negativo para compensar el margen izquierdo de las tarjetas */
+}
+
+.tarjeta {
+    width: auto;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #9e9e9e;
+    border-radius: 5px;
+    margin: 10px; /* Modifica el margen para mantener el espacio entre las tarjetas */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Efecto al pasar el cursor */
+.tarjeta:hover {
+    transform: scale(1.05); /* Escala ligeramente al 105% */
+}
+label{
+    padding: 10px;
+}
+h2{
+    font-family: Poppins;
+    font-weight: 500;
+    padding: 10px;  
+}
+p{
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 10px;  
+    text-align: justify;
+}
+span{
+    font-weight: 500;
+}
+li{
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 10px;  
+}
+/* Estilos para el modal */
+.modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

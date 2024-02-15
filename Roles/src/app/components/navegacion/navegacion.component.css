@@ -64,7 +64,7 @@ body{
 }   
 
 #menu{
-    background-color: #8dc640;
+    background-color: #d589ed;
 }
 
 img{
@@ -74,18 +74,6 @@ img{
     width: 100%;
     size: 4px;
     height: 100%;
-}
-
-#iniciar{
-    margin-left: 46%;
-}
-
-button.btn  {
-    text-align: center;
-    background-color: #8dc640;
-    color: #fff;
-    width: 160px;
-    height: 5   0px;
 }
 
 a.stack{
@@ -104,13 +92,13 @@ h2.accordion-header{
 }
 
 div.offcanvas-body{
-    background-color: #90cb43;
+    background-color: #7ec0ee;
     width: 300px;
     
 }
 
 div.offcanvas-header{
-    background-color: #90cb43;
+    background-color: #7ec0ee;
     text-align: center;
     width: 300px;
 

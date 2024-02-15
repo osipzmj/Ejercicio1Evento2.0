@@ -58,5 +58,19 @@ export class AreaInteresComponent implements OnInit {
     }
   }
 
-}
+    abrirModal(modalId: string): void {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "block";
+      }
+    }
+  
+    cerrarModal(modalId: string): void {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+
 
