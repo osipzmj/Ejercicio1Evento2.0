@@ -15,7 +15,8 @@ import { ListaRegistroComponent } from './components/lista-registro/lista-regist
 import { AreaInteresComponent } from './components/area-interes/area-interes.component';
 import { AgregarEventoComponent } from './components/agregar-evento/agregar-evento.component';
 import { OrdenGeneroComponent } from './components/orden-genero/orden-genero.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { LoginComponent } from './login/login.component';
     AgregarEventoComponent,
     OrdenGeneroComponent,
     LoginComponent,
+    FooterComponent,
 
   ],
   imports: [

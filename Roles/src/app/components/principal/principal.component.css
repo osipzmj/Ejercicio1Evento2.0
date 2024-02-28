@@ -1,91 +1,105 @@
-body{
-    box-sizing: border-box;
-    padding: 50px;
-    box-shadow: none;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    background: #f0f0f0;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
-  }
-
-  header.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  header img {
-    max-height: 80%;
-    border: 1px solid #333;
-    border-radius: 10px;
-    margin-right: 20px;
-  }
-
-  header .text-container {
-    flex: 1;
-  }
-
-  header h1,
-  header p {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
-  }
-
-  header h1.show,
-  header p.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .divider {
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    margin: 40px 0;
-  }
-
-  section {
-    padding: 80px 0;
-    text-align: center;
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
-  }
-
-  .fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-#ini{
-    width: 1000px;
-    height: auto;
+body {
+  box-sizing: border-box;
+  padding: 20px; /* Reducido para dispositivos más pequeños */
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-#t1{
-    font-family: Poppins;
-    font-weight: 700;
-    font-size: 80px;
+header {
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para dispositivos más pequeños */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f0f0f0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
 }
 
-#p1{
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 30px;
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.imgI{
-    width: 500px;
-    height: auto;
+img {
+  max-width: 100%; /* Cambiado a porcentaje para dispositivos más pequeños */
+  max-height: 50vh; /* Limitado la altura máxima */
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-right: 0; /* Eliminado margen derecho para dispositivos más pequeños */
+  margin-bottom: 20px; /* Añadido margen inferior para dispositivos más pequeños */
+}
+
+.text-container {
+  text-align: center;
+  display: inline; /* Centrado el texto para dispositivos más pequeños */
+}
+
+h1,
+p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+h1.show,
+p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  margin: 20px 0; /* Reducido margen para dispositivos más pequeños */
+}
+
+section {
+  padding: 40px 0; /* Reducido el relleno para dispositivos más pequeños */
+  text-align: center;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#ini {
+  max-width: 40%; /* Cambiado a porcentaje para dispositivos más pequeños */
+  height: auto;
+  display: flex;
+}
+
+#t1 {
+  font-family: 'Poppins', sans-serif; /* Agregado 'sans-serif' como alternativa */
+  font-weight: 700;
+  font-size: 40px; /* Reducido tamaño de fuente para dispositivos más pequeños */
+}
+
+#p1 {
+  font-family: 'Poppins', sans-serif; /* Agregado 'sans-serif' como alternativa */
+  font-weight: 300;
+  font-size: 20px; /* Reducido tamaño de fuente para dispositivos más pequeños */
+}
+
+.imgI {
+  max-width: 25%; /* Cambiado a porcentaje para dispositivos más pequeños */
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .text-container {
+    flex-direction: column; /* Cambia a un diseño de columna en dispositivos más pequeños */
+    text-align: center; /* Centra el contenido en dispositivos más pequeños */
+  }
+
 }
