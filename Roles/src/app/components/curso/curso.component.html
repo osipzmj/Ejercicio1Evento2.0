@@ -42,29 +42,39 @@
     </nav> -->
     <div class="container-tarjetas">
       <div class="tarjeta" (click)="abrirModal('miModal1')">
-          <label>Desarrollo <br>HTML</label> 
+          <label>Desarrollo HTML</label> 
           <br>
+          <div class="curso-img-container">
           <img class="curso-img" src="../../../assets/html_aprender.jpeg" alt="Conferencias">
+          </div> 
       </div>
       <div class="tarjeta" (click)="abrirModal('miModal2')">
-          <label>Cómo utilizar <br>MySQL?</label> 
+          <label>Cómo utilizar MySQL?</label> 
           <br>
+          <div class="curso-img-container">
           <img class="curso-img" src="../../../assets/mysql_usar.jpeg" alt="Conferencias">
+          </div>
       </div>
       <div class="tarjeta" (click)="abrirModal('miModal3')">
-          <label>Big Data<br>principales usos</label> 
+          <label>Big Data principales usos</label> 
           <br>
+          <div class="curso-img-container">
           <img class="curso-img" src="../../../assets/big_data_usos.jpg" alt="Conferencias">
+        </div>
       </div>
       <div class="tarjeta" (click)="abrirModal('miModal4')">
-          <label>Aprende<br>JavaScript</label> 
+          <label>Aprende JavaScript</label> 
           <br>
+          <div class="curso-img-container">
           <img class="curso-img" src="../../../assets/javascript_aprender.jpeg" alt="Conferencias">
+        </div>
       </div>
       <div class="tarjeta" (click)="abrirModal('miModal5')" *ngFor="let curso of listCurso">
         <label>{{curso.nombreCurso}}</label> 
         <br>
+        <div class="curso-img-container">
         <img class="curso-img" src="{{curso.img}}" alt="Imagen del curso">
+      </div>
         <br>
         <label for="">Categoría: </label><label>{{curso.tipoCurso}}</label> 
         <br>

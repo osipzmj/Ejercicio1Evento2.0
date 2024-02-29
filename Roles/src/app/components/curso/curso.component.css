@@ -7,12 +7,13 @@
 }
 
 .tarjeta {
-    width: auto;
+    width: 50%;
+    padding: 10%;
     font-family: Poppins;
     font-weight: 500;
     font-size: 30px;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     border: 1px solid #9e9e9e;
     border-radius: 5px;
     margin: 10px;
@@ -55,6 +56,7 @@ li {
 }
 
 /* Estilos para el modal */
+/* Estilos para el modal */
 .modal {
     display: none;
     position: fixed;
@@ -91,6 +93,13 @@ li {
 
 /* Consulta de medios para pantallas de hasta 768px */
 @media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Ajusta el ancho del modal para pantallas más pequeñas */
+    }
+}
+
+/* Consulta de medios para pantallas de hasta 768px */
+@media screen and (max-width: 768px) {
     .container-tarjetas {
         flex-direction: column; /* Cambia a una disposición de columna */
         align-items: center; /* Alinea las tarjetas al centro */
@@ -102,6 +111,9 @@ li {
     }
 }
 
+.curso-img-container {
+    text-align: center; /* Alinea el contenido al centro */
+}
 .curso-img{
     width: 70%;
     height: auto;
