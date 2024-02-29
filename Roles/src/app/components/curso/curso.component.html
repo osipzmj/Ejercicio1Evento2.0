@@ -44,22 +44,31 @@
       <div class="tarjeta" (click)="abrirModal('miModal1')">
           <label>Desarrollo <br>HTML</label> 
           <br>
-          <img src="../../../assets/html_aprender.jpeg" alt="Conferencias">
+          <img class="curso-img" src="../../../assets/html_aprender.jpeg" alt="Conferencias">
       </div>
       <div class="tarjeta" (click)="abrirModal('miModal2')">
           <label>Cómo utilizar <br>MySQL?</label> 
           <br>
-          <img src="../../../assets/mysql_usar.jpeg" alt="Conferencias">
+          <img class="curso-img" src="../../../assets/mysql_usar.jpeg" alt="Conferencias">
       </div>
       <div class="tarjeta" (click)="abrirModal('miModal3')">
           <label>Big Data<br>principales usos</label> 
           <br>
-          <img src="../../../assets/big_data_usos.jpg" alt="Conferencias">
+          <img class="curso-img" src="../../../assets/big_data_usos.jpg" alt="Conferencias">
       </div>
       <div class="tarjeta" (click)="abrirModal('miModal4')">
           <label>Aprende<br>JavaScript</label> 
           <br>
-          <img src="../../../assets/javascript_aprender.jpeg" alt="Conferencias">
+          <img class="curso-img" src="../../../assets/javascript_aprender.jpeg" alt="Conferencias">
+      </div>
+      <div class="tarjeta" (click)="abrirModal('miModal5')" *ngFor="let curso of listCurso">
+        <label>{{curso.nombreCurso}}</label> 
+        <br>
+        <img class="curso-img" src="{{curso.img}}" alt="Imagen del curso">
+        <br>
+        <label for="">Categoría: </label><label>{{curso.tipoCurso}}</label> 
+        <br>
+        <label for="">Horas totales: </label><label>{{curso.horas}}</label>  <!-- Utilizamos la etiqueta <img> para mostrar la imagen -->
       </div>
   </div>
   
@@ -154,9 +163,25 @@
           </ul>
       </div>
   </div>
+  <div id="miModal5" class="modal" *ngFor = "let curso of listCurso">
+    <div class="modal-content">
+        <span class="close" (click)="cerrarModal('miModal5')">&times;</span>
+        <h2>{{curso.nombreCurso}}</h2>
+        <p>¿Quieres convertirte en un desarrollador web completo? ¡Aprender JavaScript es esencial para construir aplicaciones web dinámicas e interactivas! Este curso te llevará desde ser un principiante total hasta dominar los conceptos fundamentales de JavaScript y más allá.
+          Contenido del Curso:
+        </p>
+        <ul>
+          <li><span>Introducción a JavaScript:</span> Comienza tu viaje aprendiendo los conceptos básicos de JavaScript, incluyendo variables, tipos de datos, operadores y estructuras de control de flujo.</li>
+          <li><span>Funciones y Eventos:</span> Descubre cómo definir funciones en JavaScript y cómo manejar eventos para crear interactividad en tus aplicaciones web.</li>
+          <li><span>Manipulación del DOM:</span> Aprende a manipular el Document Object Model (DOM) utilizando JavaScript para cambiar dinámicamente el contenido, el estilo y el comportamiento de tus páginas web.</li>
+          <li><span>Trabajo con Arrays y Objetos:</span> Explora cómo trabajar con arrays y objetos en JavaScript, incluyendo métodos de array, iteración y manipulación de objetos.</li>
+          <li><span>AJAX y Fetch API:</span> Descubre cómo realizar peticiones asíncronas al servidor utilizando AJAX y la Fetch API para cargar datos dinámicamente en tus aplicaciones web.</li>
+          <li><span>Conceptos Avanzados de JavaScript:</span> Explora conceptos avanzados de JavaScript, como closures, scope, promesas y asincronismo, que te permitirán escribir código más eficiente</li>
+        </ul>
+    </div>
+</div>
   </div>
 
 </body>
-<script src="../../../js/area_interes.js"></script>
 </html>
   

@@ -1,18 +1,28 @@
-import { Injectable } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable, firstValueFrom } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
-  constructor(private http: HttpClient) { }
+  private httpClient = inject(HttpClient);
+  private baseUrl: string;
 
-  login(user: any): Observable<any> {
-    return this.http.post("https://reqres.in/api/login", user);
+
+  constructor() {
+    this.baseUrl='http://localhost:4000/users';
   }
 
-  register(user: any): Observable<any> {
-    return this.http.post("https://reqres.in/api/register", user);
+  registro(formValue: any){
+    return firstValueFrom(
+      this.httpClient.post<any>(`${this.baseUrl}/registro`,formValue)
+    )
+  }
+
+  login(formValue: any){
+    return firstValueFrom(
+      this.httpClient.post<any>(`${this.baseUrl}/login`,formValue)
+    )
   }
 }

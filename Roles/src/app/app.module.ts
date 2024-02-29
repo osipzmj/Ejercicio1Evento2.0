@@ -12,7 +12,7 @@ import { NavegacionComponent } from './components/navegacion/navegacion.componen
 import { PrincipalComponent } from './components/principal/principal.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ListaRegistroComponent } from './components/lista-registro/lista-registro.component';
-import { AreaInteresComponent } from './components/area-interes/area-interes.component';
+import { CursoComponent } from './components/curso/curso.component';
 import { AgregarEventoComponent } from './components/agregar-evento/agregar-evento.component';
 import { OrdenGeneroComponent } from './components/orden-genero/orden-genero.component';
 import { LoginComponent } from './components/login/login.component';
@@ -29,7 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     FilterPipe,
     FilterRPipe,
     ListaRegistroComponent,
-    AreaInteresComponent,
+    CursoComponent,
     AgregarEventoComponent,
     OrdenGeneroComponent,
     LoginComponent,

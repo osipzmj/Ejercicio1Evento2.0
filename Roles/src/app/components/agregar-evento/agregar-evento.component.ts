@@ -1,5 +1,5 @@
-import { AreaService } from 'src/app/services/area.service';
-import { Area } from 'src/app/models/area';
+import {  CursoService } from 'src/app/services/curso.service';
+import { Curso } from 'src/app/models/curso';
 import { Evento } from 'src/app/models/evento';
 import { EventoService } from 'src/app/services/evento.service';
 import { Usuario } from 'src/app/models/usuario';
@@ -23,7 +23,7 @@ export class AgregarEventoComponent  implements OnInit {
   id: string | null;
   listUsuario: Usuario[] = [];
   listEvento: Evento[] = [];
-  listArea: Area[] = [];
+  listCurso: Curso[] = [];
   usuarioForm: FormGroup;
   // static fol: number = +1;
   // folio = RegistroComponent.fol+1;

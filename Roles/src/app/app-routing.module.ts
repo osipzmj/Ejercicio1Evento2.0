@@ -4,7 +4,7 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ListaRegistroComponent } from './components/lista-registro/lista-registro.component';
 import { AgregarEventoComponent } from './components/agregar-evento/agregar-evento.component';
-import { AreaInteresComponent } from './components/area-interes/area-interes.component';
+import { CursoComponent } from './components/curso/curso.component';
 import { OrdenGeneroComponent } from './components/orden-genero/orden-genero.component';
 import { LoginComponent } from './components/login/login.component';
 
@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'lista-registro',component:ListaRegistroComponent},
   {path:'agregar-evento/:id',component:AgregarEventoComponent},
   {path:'agregar-evento',component:AgregarEventoComponent},
-  {path:'cursos',component:AreaInteresComponent},
+  {path:'cursos',component:CursoComponent},
   {path:'orden',component:OrdenGeneroComponent}, 
   {path: "login", component: LoginComponent, pathMatch: "full" },
 ];

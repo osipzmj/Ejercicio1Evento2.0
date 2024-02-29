@@ -43,18 +43,18 @@
   <br>
   <div class="mb-3">
     <div class="form-group">
-       <select  [(ngModel)]="selectedArea">>
+       <select  [(ngModel)]="selectedCurso">>
  style="font-size: 20px;font-weight: 400;font-family: 'Montserrat', sans-serif;" name="dropdown" class="form-style" id="drd" 
-        formControlName="nombreArea">
-        <option value="" disabled selected>Selecciona un área de interes</option>
-        <option *ngFor="let area of listArea" 
-        [value]="area.nombreArea">{{ area.nombreArea }}
+        formControlName="nombreCurso">
+        <option value="" disabled selected>Selecciona un curso de interes</option>
+        <option *ngFor="let curso of listCurso" 
+        [value]="curso.nombreCurso">{{ curso.nombreCurso }}
         </option>
       </select>
       </div>
   </div> 
   <br>
-  <div *ngIf="listArea">
+  <div *ngIf="listCurso">
     <div class="d-flex justify-content-center">
       <table class="table table-bordered border-dark text-center" *ngIf="listUsuarios.length > 0">
         <thead>

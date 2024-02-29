@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { UsersService } from '../../services/users.service';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,15 +9,24 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email: string | undefined;
-  password: string | undefined;
 
-  constructor(public userService: UsersService) {}
+  formulario: FormGroup;
 
-  login() {
-    const user = { email: this.email, password: this.password };
-    this.userService.login(user).subscribe((data: any) => {
-      console.log(data);
-    });
+  usersService = inject(UsersService);
+  router = inject(Router)
+
+  constructor() {
+    this.formulario = new FormGroup({
+      email: new FormControl(),
+      password: new FormControl()
+    })
+  }
+
+  async onSubmit(){
+    const response = await this.usersService.login(this.formulario.value);
+    if(!response.error){
+      localStorage.setItem('token-cursos', response.token);
+      this.router.navigate(['/cursos']);
+    }
   }
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const conectarDB = require('./config/db');
-const cors = require('cors')
+const cors = require('cors');
+const { checkToken } = require('./utils/middlewares');
 
 //Creacion del servidor
 const app = express();
@@ -12,7 +13,8 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/usuario', require('./routes/usuario'));
-app.use('/area', require('./routes/area'));
+//cursos
+app.use('/curso', checkToken, require('./routes/curso'));
 app.use('/cargo', require('./routes/cargo'));
 app.use('/ciudad', require('./routes/ciudad'));
 app.use('/evento', require('./routes/evento'));

@@ -3,8 +3,8 @@ import {ToastrService} from 'ngx-toastr';
 import { Usuario } from 'src/app/models/usuario';
 import { GeneroService } from './../../services/genero.service';
 import { MongoClient } from 'mongodb';
-import { AreaService } from 'src/app/services/area.service';
-import { Area } from 'src/app/models/area';
+import { CursoService } from 'src/app/services/curso.service';
+import { Curso } from 'src/app/models/curso';
 
 @Component({
   selector: 'app-orden-genero',
@@ -14,15 +14,15 @@ import { Area } from 'src/app/models/area';
 export class OrdenGeneroComponent implements OnInit {
   listUsuarios: Usuario[] = [];
   listUsuarios2: Usuario[] = [];
-  listArea: Area[] = [];
+  listCurso: Curso[] = [];
   totalUsuarios: number | undefined;
   eventoForm: any;
-  selectedArea: string = '';
+  selectedCurso: string = '';
   filteredUsuarios: Usuario[] = [];
   
 
   constructor(private _generoService: GeneroService, 
-   private  _areaService: AreaService,
+   private  _cursoService: CursoService,
     private toastr:ToastrService ) { }
 
     ngOnInit() {
@@ -30,21 +30,21 @@ export class OrdenGeneroComponent implements OnInit {
       const generoF = 'Femenino'; // Aquí puedes establecer el valor del género a buscar
       this.obtenerGenero(generoM);
       this.obtenerGeneroF(generoF);
-      this.obtenerArea();
+      this.obtenerCurso();
       this.filteredUsuarios = this.listUsuarios;
 
     }
 
     filtrarUsuariosPorArea() {
       // filtramos la lista de usuarios por el área seleccionada
-      this.filteredUsuarios = this.listUsuarios.filter(usuario => usuario.nombreArea === this.selectedArea);
+      this.filteredUsuarios = this.listUsuarios.filter(usuario => usuario.nombreCargo === this.selectedCurso);
     }
   
-    obtenerArea() {
-      this._areaService.getArea().subscribe(
+    obtenerCurso() {
+      this._cursoService.getCurso().subscribe(
         (data) => {
           console.log(data);
-          this.listArea = data;
+          this.listCurso = data;
         },
         (error) => {
           console.log(error);

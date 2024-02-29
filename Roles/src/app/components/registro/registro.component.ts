@@ -1,6 +1,7 @@
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { UsersService } from '../../services/users.service'; 
+import { FormControl, FormGroup } from '@angular/forms';
 
 // import { RouterModule } from '@angular/router';
 @Component({
@@ -10,18 +11,21 @@ import { UsersService } from '../../services/users.service';
 })
 export class RegistroComponent  {
 
-  email: string | undefined;
-  password: string | undefined;
-  confirmPassword: string | undefined;
-  passwordError: boolean | undefined;
+  formulario: FormGroup;
 
-  constructor(public userService: UsersService) {}
+  userService = inject(UsersService)
 
-  register() {
-    const user = { email: this.email, password: this.password };
-    this.userService.register(user).subscribe((data) => {
-      console.log(data);
-    });
+  constructor() {
+    this.formulario = new FormGroup({
+      username: new FormControl(),
+      email: new FormControl(),
+      password: new FormControl(),
+    })
+  }
+
+  async onSubmit(){
+    const response = await this.userService.registro(this.formulario.value);
+    console.log(response)
   }
 }
 
