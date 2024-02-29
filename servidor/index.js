@@ -17,7 +17,7 @@ app.use('/cargo', require('./routes/cargo'));
 app.use('/ciudad', require('./routes/ciudad'));
 app.use('/evento', require('./routes/evento'));
 app.use('/genero', require('./routes/genero'));
-
+app.use('/users', require('./routes/users'));
 
 app.listen(4000, () => {
     console.log('El servidor se esta corriendo')
