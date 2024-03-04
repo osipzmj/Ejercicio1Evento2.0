@@ -21,8 +21,8 @@ export class CursoService {
     return this.http.delete(this.url + id, this.crearHeaders());
   }
 
-  guardarCurso(area: Curso): Observable<any>{
-    return this.http.post(this.url, Curso, this.crearHeaders());
+  guardarCurso(curso: Curso): Observable<any>{
+    return this.http.post(this.url, curso, this.crearHeaders());
   }
 
   obtenerCurso(id: string): Observable<any>{
@@ -40,4 +40,17 @@ export class CursoService {
       })
     }
   }
+
+  // buscarCurso(termino: string): Observable<Curso[]> {
+  //   // Realiza una solicitud GET con el término de búsqueda como parámetro de consulta
+  //   return this.http.get<Curso[]>(`${this.url}?search=${termino}`, { headers: this.crearHeaders() });
+  // }
+  // // filtrarNombre():Observable<Curso[]>{
+  //   const API = `https://rickandmortyapi.com/api/character/?curso=${Curso}`;
+  //   return this.http.get<ResponseInfoResults>(API)
+  //   .pipe(
+  //     map(( res: ResponseInfoResults) => res?.results),
+  //     catchError(())
+  //   )
+//   }
 }

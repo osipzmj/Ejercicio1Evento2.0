@@ -6,10 +6,10 @@
   <title>Página de Inicio</title>
 </head>
 <body>
-  <div>
+  <div class="principal-1" [@fadeIn]>
     <div class="text-container">
-      <h1 id="t1" class="show">Aprende, Inventa y Practica </h1>
-      <p id="p1" class="show">Diviértete y aprende con nuestros diferentes cursos, empápate de conocimiento y pon en práctica lo aprendido en nuestros cursos impartidos por profesionales especializados. Certifícate en actividades y sé capaz de crear algo nuevo.</p>
+      <h1 id="t1" class="show fade-in">Aprende, Inventa y Practica </h1>
+      <p id="p1" class="show fade-in">Diviértete y aprende con nuestros diferentes cursos,<strong> empápate de conocimiento</strong> y pon en práctica lo aprendido en nuestros cursos impartidos por profesionales especializados.  <br> Certifícate en actividades y sé capaz de crear algo nuevo.</p>
     </div>
     <img id="ini" src="../../../assets/aprendizaje.jpg" alt="Imagen de inicio">
 
@@ -19,10 +19,14 @@
 
   <main>
     <section>
-      <img class="imgI" src="../../../assets/cursos.jpg" alt="Aprendizaje de calidad">
-      <div class="fade-in">Contenido que aparece al hacer scroll</div>
-      <div class="fade-in">Otro contenido</div>
+      <div class="principal-1" [@fadeIn]>
+        <img class="imgI" src="../../../assets/cursos.jpg" alt="Aprendizaje de calidad">
+        <div class="text-container">
+          <p class="show" id="p2"><strong>¡Descubre un mundo de posibilidades con nuestros cursos! </strong>Sumérgete en el conocimiento y potencia tus habilidades con nuestra amplia variedad de programas especializados. Con nosotros, tendrás la oportunidad de explorar nuevas áreas, desarrollar tus talentos y alcanzar tus metas.</p>
+        </div>
+      </div>
     </section>
+    
 
     <div class="divider"></div>
 

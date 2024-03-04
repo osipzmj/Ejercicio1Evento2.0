@@ -8,7 +8,7 @@ tipoCurso:{
         default: 'Sin identificador'
     },
 horas:  String,
-img: String   
+img:String    
 
 
 },
