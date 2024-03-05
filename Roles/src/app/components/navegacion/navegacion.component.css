@@ -15,6 +15,11 @@ header{
     width: 80%; /* Ajusta el tamaño del logo según sea necesario */
     max-width: 250px; /* Establece un máximo para el tamaño del logo */
   }
+.nav-bar{
+    width: 70%;
+    height: 2%;
+    background: #c079d9;
+}
   
 .logo:hover{
     cursor: pointer;
@@ -102,4 +107,60 @@ a{
       .shifted .container {
         margin-left: -260px; /* Ancho del menú desplegable */
       }
+}
+.container-search {
+    position: absolute;
+    top: 100%; /* Coloca la barra de búsqueda debajo del encabezado */
+    right: 0; /* Alinea la barra de búsqueda en la esquina superior derecha */
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+input {
+    outline: none;
+    box-sizing: border-box;
+    height: 60px;
+    width: 0;
+    padding: 0 20px;
+    color: black;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid cyan;
+    transition: all .7s ease;
+}
+
+::placeholder {
+    color: grey;
+}
+
+.btn {
+    position: absolute;
+    right: 0; /* Ajusta la posición del botón a la esquina superior derecha */
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background: cyan;
+    line-height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn i {
+    font-size: 25px;
+    color: white;
+    line-height: 80px;
+    transition: all .7s ease;
+}
+
+.container-search:hover input {
+    width: 350px;
+}
+
+.container-search:hover i {
+    transform: rotate(-360deg);
+}
+
+.btn:hover {
+    background: cyan;
 }

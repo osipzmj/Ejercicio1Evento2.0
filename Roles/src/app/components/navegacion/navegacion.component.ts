@@ -1,4 +1,7 @@
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
+import { Curso } from 'src/app/models/curso';
+import { CursoService } from 'src/app/services/curso.service';
 
 @Component({
   selector: 'app-navegacion',
@@ -9,6 +12,15 @@ export class NavegacionComponent {
 
   menuValue:boolean = false;
   menu_icon: string = 'bi bi-list';
+
+  terminoBusqueda: string = '';
+  resultados: Curso[] | undefined;
+
+  
+  constructor(
+    private  _cursoService: CursoService,
+    private el: ElementRef, private renderer: Renderer2
+  ){ }
 
   abrirMenu(){
     this.menuValue = !this.menuValue;
@@ -25,8 +37,6 @@ export class NavegacionComponent {
     this.cerrarMenu();
   }
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
-
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event): void {
     const clickedInsideMenu = this.el.nativeElement.contains(event.target);
@@ -35,4 +45,8 @@ export class NavegacionComponent {
       this.cerrarMenu();
     }
   }
+  // buscar(): void {
+  //   this._cursoService.buscarCurso(this.terminoBusqueda)
+  //     .subscribe((resultados: Curso[] | undefined) => this.resultados = resultados);
+  // }
 }

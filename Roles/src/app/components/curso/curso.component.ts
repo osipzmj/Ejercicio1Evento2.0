@@ -5,6 +5,8 @@ import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Curso } from 'src/app/models/curso';
 import { CursoService } from 'src/app/services/curso.service';
+import axios from 'axios';
+import { filter, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-curso',
@@ -15,7 +17,12 @@ export class CursoComponent implements OnInit {
   listCurso: Curso[] = [];
   totalUsuarios: number | undefined;
   eventoForm: FormGroup;
+  filter='';
   id: string | null;
+  
+
+  modalAbierto: number = -1; // Variable para almacenar el índice del modal abierto
+
 
   // filterRol='';
       constructor(
@@ -36,15 +43,6 @@ export class CursoComponent implements OnInit {
     // this.esEditar();
     this.obtenerCurso();
   }
-
-  // obtenerEvento() {
-  //   this._eventoService.getEvento().subscribe(data => {
-  //     console.log(data);
-  //     this.listEvento=data;
-  //   }, error => {
-  //     console.log(error);
-  //   }) 
-  // }
 
   obtenerCurso() {
     this._cursoService.getCurso().subscribe(data => {
@@ -78,8 +76,8 @@ export class CursoComponent implements OnInit {
       if (modal) {
         modal.style.display = "none";
       }
-    }    
-
+    }
+    
   }
 
 

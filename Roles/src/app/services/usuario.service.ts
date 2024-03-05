@@ -8,8 +8,8 @@ import { catchError, tap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-url = 'http://localhost:4000/usuario/';
-url2 = 'http://localhost:4000/usuario/cuenta';
+  url = 'http://localhost:4000/usuario/';
+  url2 = 'http://localhost:4000/usuario/cuenta';
 
   constructor(private http: HttpClient) { }
 
