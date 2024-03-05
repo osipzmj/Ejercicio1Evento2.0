@@ -3,6 +3,7 @@ body {
   padding: 20px; /* Reducido para dispositivos más pequeños */
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -94,6 +95,10 @@ section {
 .imgI {
   max-width: 25%; /* Cambiado a porcentaje para dispositivos más pequeños */
   height: auto;
+}
+
+.content {
+  transition: margin-left 0.4s ease-in-out; /* Agregado para suavizar la transición al abrir/cerrar el menú */
 }
 
 @media screen and (max-width: 768px) {

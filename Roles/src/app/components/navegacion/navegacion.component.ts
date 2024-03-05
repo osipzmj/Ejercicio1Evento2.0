@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-navegacion',
@@ -18,5 +18,21 @@ export class NavegacionComponent {
   cerrarMenu(){
     this.menuValue = false;
     this.menu_icon = 'bi bi-list'; 
+  }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  onDocumentEscape(event: KeyboardEvent): void {
+    this.cerrarMenu();
+  }
+
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event): void {
+    const clickedInsideMenu = this.el.nativeElement.contains(event.target);
+    
+    if (!clickedInsideMenu) {
+      this.cerrarMenu();
+    }
   }
 }

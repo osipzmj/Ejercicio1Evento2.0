@@ -41,7 +41,7 @@
     <br>
     </nav> -->
     <div class="container-tarjetas">
-      <div class="tarjeta" (click)="abrirModal('miModal1')">
+      <!-- <div class="tarjeta" (click)="abrirModal('miModal1')">
           <label>Desarrollo HTML</label> 
           <br>
           <div class="curso-img-container">
@@ -68,17 +68,17 @@
           <div class="curso-img-container">
           <img class="curso-img" src="../../../assets/javascript_aprender.jpeg" alt="Conferencias">
         </div>
-      </div>
+      </div> -->
       <div class="tarjeta" (click)="abrirModal('miModal5')" *ngFor="let curso of listCurso">
-        <label>{{curso.nombreCurso}}</label> 
+        <h3>{{curso.nombreCurso}}</h3> 
         <br>
         <div class="curso-img-container">
         <img class="curso-img" src="{{curso.img}}" alt="Imagen del curso">
       </div>
         <br>
-        <label for="">Categoría: </label><label>{{curso.tipoCurso}}</label> 
+        <label class="label-curso0">Categoría: </label><label class="label-curso">{{curso.tipoCurso}}</label> 
         <br>
-        <label for="">Horas totales: </label><label>{{curso.horas}}</label>  <!-- Utilizamos la etiqueta <img> para mostrar la imagen -->
+        <label class="label-curso0">Horas totales: </label><label class="label-curso">{{curso.horas}}</label>  <!-- Utilizamos la etiqueta <img> para mostrar la imagen -->
       </div>
   </div>
   
@@ -86,7 +86,7 @@
   <div id="miModal1" class="modal">
       <div class="modal-content">
           <span class="close" (click)="cerrarModal('miModal1')">&times;</span>
-          <h2>Desarrollo HTML</h2>
+          <h3>Desarrollo HTML</h3>
           <p>
             ¿Quieres dar tus primeros pasos en el mundo del desarrollo web? ¡Este curso de HTML te llevará desde ser un principiante total hasta dominar los fundamentos esenciales del lenguaje de marcado más utilizado en la web!
             Contenido del Curso:
@@ -112,7 +112,7 @@
   <div id="miModal2" class="modal">
       <div class="modal-content">
           <span class="close" (click)="cerrarModal('miModal2')">&times;</span>
-          <h2>Cómo utilizar MySQL?</h2>
+          <h3>Cómo utilizar MySQL?</h3>
           <p>¿Quieres adentrarte en el fascinante mundo de las bases de datos y el almacenamiento de datos? ¡Este curso de MySQL te guiará a través de los fundamentos esenciales para comenzar a trabajar con una de las bases de datos más populares y poderosas del mundo!
             Contenido del Curso:
           </p>  
@@ -136,7 +136,7 @@
   <div id="miModal3" class="modal">
       <div class="modal-content">
           <span class="close" (click)="cerrarModal('miModal3')">&times;</span>
-          <h2>Big Data principales usos</h2>
+          <h3>Big Data principales usos</h3>
           <p>¿Quieres descubrir cómo las organizaciones están aprovechando el poder del Big Data para impulsar la innovación y la toma de decisiones? ¡Este curso te llevará a través de los principales usos y aplicaciones del Big Data en una amplia variedad de industrias y campos!
             Contenido del Curso:
           </p>
@@ -159,7 +159,7 @@
   <div id="miModal4" class="modal">
       <div class="modal-content">
           <span class="close" (click)="cerrarModal('miModal4')">&times;</span>
-          <h2>Aprende JavaScript</h2>
+          <h3>Aprende JavaScript</h3>
           <p>¿Quieres convertirte en un desarrollador web completo? ¡Aprender JavaScript es esencial para construir aplicaciones web dinámicas e interactivas! Este curso te llevará desde ser un principiante total hasta dominar los conceptos fundamentales de JavaScript y más allá.
             Contenido del Curso:
           </p>
@@ -176,7 +176,7 @@
   <div id="miModal5" class="modal" *ngFor = "let curso of listCurso">
     <div class="modal-content">
         <span class="close" (click)="cerrarModal('miModal5')">&times;</span>
-        <h2>{{curso.nombreCurso}}</h2>
+        <h3>{{curso.nombreCurso}}</h3>
         <p>¿Quieres convertirte en un desarrollador web completo? ¡Aprender JavaScript es esencial para construir aplicaciones web dinámicas e interactivas! Este curso te llevará desde ser un principiante total hasta dominar los conceptos fundamentales de JavaScript y más allá.
           Contenido del Curso:
         </p>

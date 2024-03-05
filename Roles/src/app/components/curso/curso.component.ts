@@ -78,7 +78,8 @@ export class CursoComponent implements OnInit {
       if (modal) {
         modal.style.display = "none";
       }
-    }
+    }    
+
   }
 
 

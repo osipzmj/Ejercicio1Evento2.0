@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use('/usuario', require('./routes/usuario'));
 //cursos
-app.use('/curso', checkToken, require('./routes/curso'));
+app.use('/curso', require('./routes/curso'));
 app.use('/cargo', require('./routes/cargo'));
 app.use('/ciudad', require('./routes/ciudad'));
 app.use('/evento', require('./routes/evento'));

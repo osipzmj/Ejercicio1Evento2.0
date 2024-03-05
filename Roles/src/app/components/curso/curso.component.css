@@ -7,7 +7,7 @@
 }
 
 .tarjeta {
-    width: 50%;
+    width: 30%;
     padding: 10%;
     font-family: Poppins;
     font-weight: 500;
@@ -30,10 +30,10 @@ label {
     padding: 10px;
 }
 
-h2 {
+h3 {
     font-family: Poppins;
-    font-weight: 500;
-    padding: 10px;  
+    font-weight: 600;
+    padding: 5%;  
 }
 
 p {
@@ -115,6 +115,21 @@ li {
     text-align: center; /* Alinea el contenido al centro */
 }
 .curso-img{
-    width: 70%;
+    width: 60%;
     height: auto;
+    padding: 0;
+}
+
+
+.label-curso{
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0;
+}
+.label-curso0{
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 1%;
 }

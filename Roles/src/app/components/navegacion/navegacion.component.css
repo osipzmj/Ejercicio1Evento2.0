@@ -1,9 +1,9 @@
 header{
     padding: 60px;
     background: #c079d9;
-    font-family: 'Poppins', sans-serif;
-    
+    font-family: 'Poppins', sans-serif;  
 }
+
 .logo-container {
     position: absolute;
     top: 0;
@@ -50,16 +50,18 @@ a{
     color: white;
     text-decoration: none;
 }
+
 @media screen and (min-width: 128px) and (max-width:900px){
     .desktop-menu{
         position: fixed;
         right: -280px;
-        top: 64px;
+        top: 150px;
         background:#c079d9;
         width: 260px;
         height: 100%;
         transition: 0.4s ease-in-out;
         z-index: 1000;
+        margin-top: 40px; /* Ajusta el margen superior del menú para dispositivos móviles */
     }
     .desktop-menu ul li {
         display: block;
@@ -68,6 +70,10 @@ a{
         padding: 10px 0 10px 26px;
         border-bottom: 1px solid grey;
     }
+    .container-main {
+        position: relative;
+        overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+    }    
     .menu-icon{
         display: block;
         color: white;
@@ -85,8 +91,15 @@ a{
       .logo {
         width: 30%; /* Ajusta el tamaño del logo para dispositivos móviles */
       }
-    
-      .desktop-menu {
-        margin-top: 40px; /* Ajusta el margen superior del menú para dispositivos móviles */
+
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow-x: hidden;
+      }
+      
+      .shifted .container {
+        margin-left: -260px; /* Ancho del menú desplegable */
       }
 }
