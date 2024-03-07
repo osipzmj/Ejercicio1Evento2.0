@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>
+        Información del curso
+    </h1>
+</div>
+<div></div>
+<div *ngIf="curso">
+    <h3>{{curso.nombreCurso}}</h3>
+    <p>{{curso.tipoCurso}}</p>
+    <a [routerLink]="['/cursos']">Ver detalles</a>
+</div>
+<div></div>

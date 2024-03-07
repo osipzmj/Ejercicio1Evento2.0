@@ -16,6 +16,10 @@ export class CursoService {
 
     return this.http.get(this.url, this.crearHeaders());  
   }
+  
+  getCursoId(id: string): Observable<any>{
+    return this.http.get(this.url + id,  this.crearHeaders());
+  }
 
   eliminarCurso(id: string): Observable<any>{
     return this.http.delete(this.url + id, this.crearHeaders());

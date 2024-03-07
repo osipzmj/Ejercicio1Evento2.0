@@ -67,7 +67,15 @@ li {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
+    opacity: 0; /* Inicialmente, el modal está oculto */ /* Agregamos una transición suave para la opacidad */
 }
+
+
+.modal.show {
+    display: block;
+    opacity: 1; /* Cuando se muestra el modal, la opacidad se establece en 1 */
+}
+
 
 .modal-content {
     background-color: #fefefe;
@@ -118,3 +126,16 @@ li {
     width: 70%;
     height: auto;
 }
+
+.custom-button {
+    font-size: 14px; /* Tamaño de fuente */
+    padding: 8px 16px; /* Espacio alrededor del texto */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: none; 
+    background-color: #888;/* Sin sombra */
+  }
+  
+  .custom-button:hover {
+    background-color: #1976d2; /* Cambiar color de fondo al pasar el cursor */
+    color: #fff; /* Cambiar color de texto al pasar el cursor */
+  }

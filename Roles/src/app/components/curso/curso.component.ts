@@ -64,19 +64,20 @@ export class CursoComponent implements OnInit {
   //   }
   // }
 
-    abrirModal(modalId: string): void {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = "block";
-      }
+  abrirModal(modalId: string): void {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('show'); // Agrega la clase show para mostrar el modal con la animación
     }
-  
-    cerrarModal(modalId: string): void {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = "none";
-      }
+}
+
+cerrarModal(modalId: string): void {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('show'); // Remueve la clase show para ocultar el modal con la animación
     }
+}
+
     
   }
 

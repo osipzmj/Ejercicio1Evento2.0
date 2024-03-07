@@ -17,6 +17,7 @@ import { AgregarEventoComponent } from './components/agregar-evento/agregar-even
 import { OrdenGeneroComponent } from './components/orden-genero/orden-genero.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     OrdenGeneroComponent,
     LoginComponent,
     FooterComponent,
+    CursoDetalleComponent,
 
   ],
   imports: [

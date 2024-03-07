@@ -7,7 +7,7 @@ const cursoController = require('../controllers/cursoController')
 router.post('/',cursoController.crearCurso);
 router.get('/', cursoController.obtenerCursos),
 router.put('/:id', cursoController.actualizarCurso),
-router.get('/:id', cursoController.obtenerCursoID),
+router.get('/:id', cursoController.obtenerCursosId),
 router.delete('/:id', cursoController.eliminarCurso),
 
 module.exports = router;
