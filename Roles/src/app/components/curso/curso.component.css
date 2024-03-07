@@ -7,7 +7,7 @@
 }
 
 .tarjeta {
-    width: 50%;
+    width: 30%;
     padding: 10%;
     font-family: Poppins;
     font-weight: 500;
@@ -30,10 +30,10 @@ label {
     padding: 10px;
 }
 
-h2 {
+h3 {
     font-family: Poppins;
-    font-weight: 500;
-    padding: 10px;  
+    font-weight: 600;
+    padding: 5%;  
 }
 
 p {
@@ -123,19 +123,21 @@ li {
     text-align: center; /* Alinea el contenido al centro */
 }
 .curso-img{
-    width: 70%;
+    width: 60%;
     height: auto;
+    padding: 0;
 }
 
-.custom-button {
-    font-size: 14px; /* Tamaño de fuente */
-    padding: 8px 16px; /* Espacio alrededor del texto */
-    border-radius: 4px; /* Bordes redondeados */
-    box-shadow: none; 
-    background-color: #888;/* Sin sombra */
-  }
-  
-  .custom-button:hover {
-    background-color: #1976d2; /* Cambiar color de fondo al pasar el cursor */
-    color: #fff; /* Cambiar color de texto al pasar el cursor */
-  }
+
+.label-curso{
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0;
+}
+.label-curso0{
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 1%;
+}
