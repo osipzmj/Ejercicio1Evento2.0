@@ -19,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Swiper } from 'swiper';
+import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
 
 
 @NgModule({
@@ -36,6 +37,8 @@ import { Swiper } from 'swiper';
     OrdenGeneroComponent,
     LoginComponent,
     FooterComponent,
+    CursoDetalleComponent,
+
   ],
   imports: [
     BrowserModule,

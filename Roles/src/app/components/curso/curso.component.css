@@ -67,7 +67,15 @@ li {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
+    opacity: 0; /* Inicialmente, el modal está oculto */ /* Agregamos una transición suave para la opacidad */
 }
+
+
+.modal.show {
+    display: block;
+    opacity: 1; /* Cuando se muestra el modal, la opacidad se establece en 1 */
+}
+
 
 .modal-content {
     background-color: #fefefe;

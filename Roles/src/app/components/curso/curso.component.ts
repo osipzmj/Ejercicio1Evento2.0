@@ -46,18 +46,28 @@ export class CursoComponent implements OnInit {
     }) 
   }
 
+  // esEditar() {
+
+  //   if(this.id !== null) {
+  //     this._eventoService.editarEvento(this.id, this.eventoForm.value).subscribe(data => {
+  //       this.eventoForm.setValue({
+  //         cupo: data.cupo         
+  //       })
+  //     })
+  //   }
+  // }
+
   abrirModal(modalId: string): void {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = "block";
-      }
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('show'); // Agrega la clase show para mostrar el modal con la animación
     }
-  
-    cerrarModal(modalId: string): void {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = "none";
-      }
+}
+
+cerrarModal(modalId: string): void {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('show'); // Remueve la clase show para ocultar el modal con la animación
     }
 
     applyFilter() {
@@ -67,5 +77,7 @@ export class CursoComponent implements OnInit {
         this.listCurso = new FilterPipe().transform(this.listCurso, this.searchTerm);
       }
     }
+}
+
     
   }
