@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {ToastrService} from 'ngx-toastr';
-import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Curso } from 'src/app/models/curso';
 import { CursoService } from 'src/app/services/curso.service';
-import axios from 'axios';
-import { filter, throwError } from 'rxjs';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
 
 @Component({
   selector: 'app-curso',
@@ -17,14 +15,11 @@ export class CursoComponent implements OnInit {
   listCurso: Curso[] = [];
   totalUsuarios: number | undefined;
   eventoForm: FormGroup;
-  filter='';
+  searchTerm='';
   id: string | null;
-  
 
   modalAbierto: number = -1; // Variable para almacenar el índice del modal abierto
 
-
-  // filterRol='';
       constructor(
       private fb: FormBuilder,
       private toastr: ToastrService,
@@ -39,8 +34,6 @@ export class CursoComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    // this.obtenerEvento();
-    // this.esEditar();
     this.obtenerCurso();
   }
 
@@ -76,9 +69,15 @@ cerrarModal(modalId: string): void {
     if (modal) {
         modal.classList.remove('show'); // Remueve la clase show para ocultar el modal con la animación
     }
+
+    applyFilter() {
+      if (this.searchTerm.trim() === '') {
+        this.obtenerCurso();
+      } else {
+        this.listCurso = new FilterPipe().transform(this.listCurso, this.searchTerm);
+      }
+    }
 }
 
     
   }
-
-
