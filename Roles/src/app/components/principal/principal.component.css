@@ -127,28 +127,40 @@ section {
   }
 }
 
+
+
+/* ESTILOS DEL CARRUSEL */
+
+.carrusel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .swiper-container {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: flexbox;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  display: flex;
 }
 
 .swiper-slide {
+  margin-right: 20px;
   background-position: center;
   background-size: cover;
   width: 320px;
-  background-color: #fff;
+  background-color: #c079d9;
   overflow: hidden;
   border-radius: 8px;
 }
 
-.picture {
+.carrusel .picture {
   width: 320px;
   height: 320px;
   overflow: hidden;
   
-  img {
+   img {
     display: block;
     width: 100%;
     height: 100%;
@@ -156,7 +168,7 @@ section {
   }
 }
 
-.detail {
+.carrusel .detail {
   padding: 25px 20px;
   font-weight: 600;
   text-align: center;
@@ -169,6 +181,6 @@ section {
   span {
     display: block;
     font-size: 16px;
-    color: #f44336;
+    color: #fff;
   }
 }

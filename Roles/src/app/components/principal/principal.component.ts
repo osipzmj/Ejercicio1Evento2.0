@@ -15,32 +15,31 @@ import Swiper from 'swiper';
       ])
     ])
   ]
-})
+})  
+
 export class PrincipalComponent implements OnInit {
+  constructor() {}
 
-  private swiper: Swiper | undefined;
+  ngOnInit() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-
-    // const swiperParams: Swiper = {
-    //   effect: "EffectCoverflow",
-    //   grabCursor: true,
-    //   centeredSlides: true,
-    //   slidesPerView: "auto",
-    //   coverflowEffect: {
-    //     rotate: 20,
-    //     stretch: 0,
-    //     depth: 30,
-    //     modifier: 1,
-    //     slideShadows: true
-    //   },
-    //   pagination: {
-    //     el: ".swiper-pagination"
-    //   }
-    // };
-    
-    // const swiper = new Swiper('.swiper', swiperParams);
+  ngAfterViewInit() {
+    this.initSwiper();
   }
+
+  private initSwiper() {
+    const swiper = new Swiper(".swiper-container", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 350,
+        modifier: 1,
+        slideShadows: true
+      }
+    });
+  }
+  
 }
