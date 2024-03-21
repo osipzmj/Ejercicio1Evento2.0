@@ -14,6 +14,11 @@ footer {
     font-size: 20px;
     margin-bottom: 20px;
 }
+p{
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
 
 .footer ul {
     list-style: none;
@@ -22,8 +27,9 @@ footer {
 
 .footer ul li {
     margin-bottom: 10px;
-    list-style-type: none;
+    list-style: none;
 }
+
 
 .social-links li a,
 .help-links li a {
@@ -33,6 +39,5 @@ footer {
 
 .social-links li a:hover,
 .help-links li a:hover {
-    color: black; 
-    list-style-type: none;/* Color de resaltado al pasar el ratón */
+    color: black; /* Color de resaltado al pasar el ratón */
 }

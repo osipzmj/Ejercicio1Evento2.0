@@ -1,6 +1,7 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
-import Swiper from 'swiper';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import Swiper from 'swiper';
+//import { SwiperOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-principal',
@@ -16,7 +17,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })  
 
-export class PrincipalComponent implements OnInit, AfterViewInit {
+export class PrincipalComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}

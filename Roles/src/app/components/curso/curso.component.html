@@ -75,7 +75,7 @@
         </li>
       </ul>
       <br />
-      <--!Barra de busqueda-->
+      Barra de busqueda-->
       <div class="container-tarjetas">
         
         <div class="tarjeta" (click)="abrirModal('miModal5')" *ngIf="listCurso.length > 0">
@@ -113,43 +113,57 @@
             <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[2].horas }}</label>
           </div>
         </div>
-
-        <div class="tarjeta" (click)="abrirModal('miModal2')" *ngIf="listCurso.length > 0">
-          <label class="nom">{{ listCurso[3].nombreCurso }}</label>
+        <div class="tarjeta" (click)="abrirModal('miModal2')">
+          <label>{{ listCurso[3].nombreCurso }}</label>
           <br />
           <div class="curso-img-container">
-            <img class="curso-img" src="../../../assets/python.jpg" alt="Conferencias" />
+            <img
+              class="curso-img"
+              src="../../../assets/python.jpg"
+              alt="Conferencias"
+            />
             <br />
-            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[3].tipoCurso }}</label>
+            <label for="">Categoría: </label
+            ><label>{{ listCurso[3].tipoCurso }}</label>
             <br />
-            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[3].horas }}</label>
+            <label for="">Horas totales: </label
+            ><label>{{ listCurso[3].horas }}</label>
           </div>
         </div>
-
-        <div class="tarjeta" (click)="abrirModal('miModal2')" *ngIf="listCurso.length > 0">
-          <label class="nom">{{ listCurso[4].nombreCurso }}</label>
+        <div class="tarjeta" (click)="abrirModal('miModal2')">
+          <label>{{ listCurso[4].nombreCurso }}</label>
           <br />
           <div class="curso-img-container">
-            <img class="curso-img" src="../../../assets/marketing.jpg" alt="Conferencias" />
+            <img
+              class="curso-img"
+              src="../../../assets/marketing.png"
+              alt="Conferencias"
+            />
             <br />
-            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[4].tipoCurso }}</label>
+            <label for="">Categoría: </label
+            ><label>{{ listCurso[4].tipoCurso }}</label>
             <br />
-            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[4].horas }}</label>
+            <label for="">Horas totales: </label
+            ><label>{{ listCurso[4].horas }}</label>
           </div>
         </div>
-
-        <div class="tarjeta" (click)="abrirModal('miModal2')" *ngIf="listCurso.length > 0">
-          <label class="nom">{{ listCurso[5].nombreCurso }}</label>
+        <div class="tarjeta" (click)="abrirModal('miModal2')">
+          <label>{{ listCurso[5].nombreCurso }}</label>
           <br />
           <div class="curso-img-container">
-            <img class="curso-img" src="../../../assets/diseno_grafico.jpg" alt="Conferencias" />
+            <img
+              class="curso-img"
+              src="../../../assets/diseno-grafico-creativo.jpg"
+              alt="Conferencias"
+            />
             <br />
-            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[5].tipoCurso }}</label>
+            <label for="">Categoría: </label
+            ><label>{{ listCurso[5].tipoCurso }}</label>
             <br />
-            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[5].horas }}</label>
+            <label for="">Horas totales: </label
+            ><label>{{ listCurso[5].horas }}</label>
           </div>
         </div>
-        
       </div>
 
       <!-- Modal 1 -->
@@ -450,7 +464,6 @@
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+    </div>
+  </body>
 </html>
