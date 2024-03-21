@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  
+
   <div class="container">
     <title>Cursos</title>
-    <br>  
+    <br>
     <ul class="nav nav-tabs">
       <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
         <a class="nav-link" href="principal">Inicio</a>
       </li>
-      <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
+      <!-- <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
         <a class="nav-link" href="lista-registro">Más información</a>
-      </li>
+      </li> -->
       <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
         <a class="nav-link active" href="area-interes">Cursos</a>
       </li>
-      <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
+      <!-- <li style="font-size: 15px;font-weight: 200;font-family: 'Montserrat', sans-serif;" class="nav-item">
         <a class="nav-link" href="orden">Opiniones</a>
-      </li>
-      
+      </li> -->
+
     </ul>
     <br>
 
     <!--Barra de busqueda-->
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-      <form class="input-group" role="search" (input)="applyFilter()">
-        <input class="form-control me-2" type="search" name="filterCursos" placeholder="Buscar Cursos" aria-label="search" [(ngModel)]="searchTerm">
-        <button class="btn btn-outline-success" type="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="input-group" role="search" (input)="applyFilter()">
+          <input class="form-control me-2" type="search" name="filterCursos" placeholder="Buscar Cursos"
+            aria-label="search" [(ngModel)]="searchTerm">
+          <button class="btn btn-outline-success" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
             </svg>
-        </button>
-      </form>
-    </div>
-    <br>
-  </nav>
+          </button>
+        </form>
+      </div>
+      <br>
+    </nav>
 
     <div class="container-tarjetas">
       <!-- <div class="tarjeta" (click)="abrirModal('miModal1')">
@@ -70,69 +75,81 @@
         </li>
       </ul>
       <br />
-      <!--Barra de busqueda-->
+      <--!Barra de busqueda-->
       <div class="container-tarjetas">
-        <div
-          class="tarjeta"
-          (click)="abrirModal('miModal5')"
-          *ngIf="listCurso.length > 0"
-        >
-          <label>{{ listCurso[0].nombreCurso }}</label>
+        
+        <div class="tarjeta" (click)="abrirModal('miModal5')" *ngIf="listCurso.length > 0">
+          <label class="nom">{{ listCurso[0].nombreCurso }}</label>
           <br />
           <div class="curso-img-container">
-            <img
-              class="curso-img"
-              src="{{ listCurso[0].img }}"
-              alt="Imagen del curso"
-            />
+            <img class="curso-img" src="{{ listCurso[0].img }}" alt="Imagen del curso" />
+            <br>
+            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[0].tipoCurso }}</label>
+            <br />
+            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[0].horas }}</label>
           </div>
-          <br />
-          <label for="">Categoría: </label
-          ><label>{{ listCurso[0].tipoCurso }}</label>
-          <br />
-          <label for="">Horas totales: </label
-          ><label>{{ listCurso[0].horas }}</label>
-          <br>
-         
         </div>
-        <div
-          class="tarjeta"
-          (click)="abrirModal('miModal1')"
-          *ngIf="listCurso.length > 0"
-        >
-          <label>{{ listCurso[1].nombreCurso }}</label>
+        
+        <div class="tarjeta" (click)="abrirModal('miModal1')" *ngIf="listCurso.length > 0">
+          <label class="nom">{{ listCurso[1].nombreCurso }}</label>
           <br />
           <div class="curso-img-container">
-            <img
-              class="curso-img"
-              src="{{ listCurso[1].img }}"
-              alt="Conferencias"
-            />
+            <img class="curso-img" src="{{ listCurso[1].img }}" alt="Conferencias" />
             <br />
-            <label for="">Categoría: </label
-            ><label>{{ listCurso[1].tipoCurso }}</label>
+            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[1].tipoCurso }}</label>
             <br />
-            <label for="">Horas totales: </label  
-            ><label>{{ listCurso[1].horas }}</label>
+            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[1].horas }}</label>
           </div>
         </div>
-        <div class="tarjeta" (click)="abrirModal('miModal2')">
-          <label>{{ listCurso[2].nombreCurso }}</label>
+
+        <div class="tarjeta" (click)="abrirModal('miModal2')" *ngIf="listCurso.length > 0">
+          <label class="nom">{{ listCurso[2].nombreCurso }}</label>
           <br />
           <div class="curso-img-container">
-            <img
-              class="curso-img"
-              src="{{ listCurso[2].img }}"
-              alt="Conferencias"
-            />
+            <img class="curso-img" src="{{ listCurso[2].img }}" alt="Conferencias" />
             <br />
-            <label for="">Categoría: </label
-            ><label>{{ listCurso[2].tipoCurso }}</label>
+            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[2].tipoCurso }}</label>
             <br />
-            <label for="">Horas totales: </label
-            ><label>{{ listCurso[2].horas }}</label>
+            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[2].horas }}</label>
           </div>
         </div>
+
+        <div class="tarjeta" (click)="abrirModal('miModal2')" *ngIf="listCurso.length > 0">
+          <label class="nom">{{ listCurso[3].nombreCurso }}</label>
+          <br />
+          <div class="curso-img-container">
+            <img class="curso-img" src="../../../assets/python.jpg" alt="Conferencias" />
+            <br />
+            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[3].tipoCurso }}</label>
+            <br />
+            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[3].horas }}</label>
+          </div>
+        </div>
+
+        <div class="tarjeta" (click)="abrirModal('miModal2')" *ngIf="listCurso.length > 0">
+          <label class="nom">{{ listCurso[4].nombreCurso }}</label>
+          <br />
+          <div class="curso-img-container">
+            <img class="curso-img" src="../../../assets/marketing.jpg" alt="Conferencias" />
+            <br />
+            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[4].tipoCurso }}</label>
+            <br />
+            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[4].horas }}</label>
+          </div>
+        </div>
+
+        <div class="tarjeta" (click)="abrirModal('miModal2')" *ngIf="listCurso.length > 0">
+          <label class="nom">{{ listCurso[5].nombreCurso }}</label>
+          <br />
+          <div class="curso-img-container">
+            <img class="curso-img" src="../../../assets/diseno_grafico.jpg" alt="Conferencias" />
+            <br />
+            <label class="cate" for="">Categoría: </label><label class="tipo">{{ listCurso[5].tipoCurso }}</label>
+            <br />
+            <label class="cate" for="">Horas totales: </label><label class="hora">{{ listCurso[5].horas }}</label>
+          </div>
+        </div>
+        
       </div>
 
       <!-- Modal 1 -->
@@ -198,7 +215,7 @@
             ¡Únete hoy y comienza tu camino hacia el dominio de HTML!
           </p>
         </div>
-        
+
       </div>
 
       <!-- Modal 2 -->
@@ -428,10 +445,12 @@
           <button mat-raised-button color="primary" [routerLink]="['/cursos', listCurso[0]._id]" class="custom-button">
             Más información
           </button>
-          
-          
+
+
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

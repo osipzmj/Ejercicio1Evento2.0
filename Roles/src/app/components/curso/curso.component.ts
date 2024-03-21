@@ -65,19 +65,17 @@ export class CursoComponent implements OnInit {
 }
 
 cerrarModal(modalId: string): void {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.classList.remove('show'); // Remueve la clase show para ocultar el modal con la animación
-    }
-
-    applyFilter() {
-      if (this.searchTerm.trim() === '') {
-        this.obtenerCurso();
-      } else {
-        this.listCurso = new FilterPipe().transform(this.listCurso, this.searchTerm);
-      }
-    }
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('show'); // Remueve la clase show para ocultar el modal con la animación
+  }
 }
 
-    
+applyFilter() {
+  if (this.searchTerm.trim() === '') {
+    this.obtenerCurso();
+  } else {
+    this.listCurso = new FilterPipe().transform(this.listCurso, this.searchTerm);
   }
+}
+}
