@@ -17,9 +17,10 @@ import { AgregarEventoComponent } from './components/agregar-evento/agregar-even
 import { OrdenGeneroComponent } from './components/orden-genero/orden-genero.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Swiper } from 'swiper';
 import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
+import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
     LoginComponent,
     FooterComponent,
     CursoDetalleComponent,
+    PaginaErrorComponent,
 
   ],
   imports: [
@@ -48,7 +50,7 @@ import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
     ToastrModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    NgbModule
+   // NgbModule
   ],
   providers: [FilterPipe, Swiper],
   bootstrap: [AppComponent]

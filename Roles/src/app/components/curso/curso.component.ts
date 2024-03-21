@@ -70,13 +70,13 @@ cerrarModal(modalId: string): void {
         modal.classList.remove('show'); // Remueve la clase show para ocultar el modal con la animación
     }
 
-    applyFilter() {
-      if (this.searchTerm.trim() === '') {
-        this.obtenerCurso();
-      } else {
-        this.listCurso = new FilterPipe().transform(this.listCurso, this.searchTerm);
-      }
-    }
+}
+applyFilter() {
+  if (this.searchTerm.trim() === '') {
+    this.obtenerCurso();
+  } else {
+    this.listCurso = new FilterPipe().transform(this.listCurso, this.searchTerm);
+  }
 }
 
     

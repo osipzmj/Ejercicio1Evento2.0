@@ -8,6 +8,7 @@ import { CursoComponent } from './components/curso/curso.component';
 import { OrdenGeneroComponent } from './components/orden-genero/orden-genero.component';
 import { LoginComponent } from './components/login/login.component';
 import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
+import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/principal',pathMatch:'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'cursos',component:CursoComponent},
   {path:'orden',component:OrdenGeneroComponent}, 
   {path: "login", component: LoginComponent, pathMatch: "full" },
-  { path: 'cursos/:_id', component: CursoDetalleComponent }
+  { path: 'cursos/:_id', component: CursoDetalleComponent },
+  { path: '**', component:PaginaErrorComponent }
 ];
 
 @NgModule({
