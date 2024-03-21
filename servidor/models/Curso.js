@@ -1,20 +1,26 @@
-const { Timestamp } = require('mongodb');
-const mongoose = require('mongoose');
+const { Timestamp } = require("mongodb");
+const mongoose = require("mongoose");
 
-const UsuarioSchema = mongoose.Schema({
-nombreCurso: String,
-tipoCurso:{
+const CursoSchema = mongoose.Schema(
+    {
+      nombreCurso: String,
+      tipoCurso: {
         type: String,
-        default: 'Sin identificador'
+        default: "Sin identificador",
+      },
+      horas: String,
+      img: String,
+      descripcion: String,
+      idioma: String,
+      valoracion: Number, // Cambiado a Number en lugar de Boolean
+      pais: String,
+      precio: Number, // Cambiado a Number en lugar de Boolean
     },
-horas:  String,
-img:String    
-
-
-},
-{
-    collection:'Curso',
-    timestamps: true
-});
-
-module.exports = mongoose.model('Curso',UsuarioSchema)
+    {
+      collection: "Curso",
+      timestamps: true,
+    }
+  );
+  
+  module.exports = mongoose.model("Curso", CursoSchema);
+  

@@ -13,15 +13,22 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ListaRegistroComponent } from './components/lista-registro/lista-registro.component';
 import { CursoComponent } from './components/curso/curso.component';
-import { AgregarEventoComponent } from './components/agregar-evento/agregar-evento.component';
+import { CrearCursoComponent } from './components/crear-curso/crear-curso.component';
 import { OrdenGeneroComponent } from './components/orden-genero/orden-genero.component';
 import { LoginComponent } from './components/login/login.component';
+<<<<<<< Updated upstream
 import { FooterComponent } from './footer/footer.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Swiper } from 'swiper';
 import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
 import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
+=======
+import { FooterComponent } from './components/footer/footer.component';
+import { CursoDetalleComponent } from './components/curso-detalle/curso-detalle.component';
+>>>>>>> Stashed changes
 
+//import { AdminGuard } from './guard/admin.guard';
+//import { AdminGuard } from './guard/admin.guard';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,7 @@ import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
     FilterRPipe,
     ListaRegistroComponent,
     CursoComponent,
-    AgregarEventoComponent,
+    CrearCursoComponent,
     OrdenGeneroComponent,
     LoginComponent,
     FooterComponent,
@@ -52,7 +59,12 @@ import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
     FormsModule,
    // NgbModule
   ],
+<<<<<<< Updated upstream
   providers: [FilterPipe, Swiper],
+=======
+ // providers: [AdminGuard],
+  providers: [],
+>>>>>>> Stashed changes
   bootstrap: [AppComponent]
 })
 export class AppModule { }
