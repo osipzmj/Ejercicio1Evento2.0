@@ -7,13 +7,8 @@ import { CrearCursoComponent } from './components/crear-curso/crear-curso.compon
 import { CursoComponent } from './components/curso/curso.component';
 import { OrdenGeneroComponent } from './components/orden-genero/orden-genero.component';
 import { LoginComponent } from './components/login/login.component';
-<<<<<<< Updated upstream
-import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
-import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
-=======
 import { CursoDetalleComponent } from './components/curso-detalle/curso-detalle.component';
-//import { AdminGuard } from './guard/admin.guard';
->>>>>>> Stashed changes
+import { PaginaErrorComponent } from './pagina-error/pagina-error.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/principal',pathMatch:'full'},
