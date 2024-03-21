@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
-import { Component, AfterViewInit, OnInit } from '@angular/core';
-import Swiper from 'swiper';
-=======
 import { Component, OnInit } from '@angular/core';
->>>>>>> Stashed changes
 import { trigger, transition, style, animate } from '@angular/animations';
 import Swiper from 'swiper';
 //import { SwiperOptions } from 'swiper/types';
@@ -20,36 +15,6 @@ import Swiper from 'swiper';
       ])
     ])
   ]
-<<<<<<< Updated upstream
-})  
-
-export class PrincipalComponent implements OnInit, AfterViewInit {
-  constructor() {}
-
-  ngOnInit() {}
-
-  ngAfterViewInit() {
-    this.initSwiper();
-  }
-
-  private initSwiper() {
-    const swiper = new Swiper(".swiper-container", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 20,
-        stretch: 0,
-        depth: 350,
-        modifier: 1,
-        slideShadows: true
-      }
-    });
-  }
-  
-}
-=======
 })
 export class PrincipalComponent implements OnInit {
 
@@ -79,4 +44,3 @@ export class PrincipalComponent implements OnInit {
     // const swiper = new Swiper('.swiper', swiperParams);
   }
 }
->>>>>>> Stashed changes
